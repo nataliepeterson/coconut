@@ -53,13 +53,49 @@
             onmouseover="mOver(this)" onmouseout="mOut(this)"
             >ONE TIME FOR...
             </div>
+        <div>
+            <form>
+                first name:<br>
+                <input type="text" name="firstname" id="firstname">
+                <br>
+                last name:<br>
+                <input type="text" name="lastname" id="lastname">
+                <br>
+                donation:<br>
+                <input type="text" name="donation" id="donation">
+            </form>
+            <button type="button"
+            onclick="donate()">Submit</button>
+            <div id="thankyou"></div>
+
+
+        </div>
         <script>
+            
         function mOver(obj){
             obj.innerHTML="THE SLOTHS!🥂"
         }
         function mOut(obj){
-            obj.innerHTML="ONE TIME FOR..."
+           obj.innerHTML="ONE TIME FOR..."
+        }
+        function donate(){
+            let firstname=document.getElementById('firstname').value;
+            let lastname=document.getElementById('lastname').value;
+            let donation=document.getElementById('donation').value;         
+            let donor= new Donor(firstname, lastname, donation)
+            document.getElementById('thankyou').innerHTML=(donor.saythanks());
+        }
+
+        
+        function Donor(firstname, lastname, donation){
+            this.firstname=firstname;
+            this.lastname=lastname;
+            this.donation=donation;
+            this.saythanks=function(){
+                return ('Thank you '+ this.firstname + ' '+ this.lastname+ ' '+ 'for donating'+ ' ' + this.donation+ ' '+ 'to the Sloth fund!')
+            }
         }
         </script>
+        
         </body>
 </html>
