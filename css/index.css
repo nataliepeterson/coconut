@@ -1,0 +1,43 @@
+body{
+    background-color: white;
+}
+h1{
+    color: #2D804F;
+    font-family: archivo;
+    font-size: 34px;
+    text-align: left;
+    font-weight: bold;
+}
+.box{
+color: white;
+font-size: 21px;
+text-align: left;
+padding: 40px;
+font-family: archivo;
+border-radius: 10px;
+margin: 10px;
+}
+
+.box1{
+    background: #A3B18A;
+}
+
+.box2{
+    background: #344E41;
+}
+
+.box3{
+    background: #0D5D56;
+}
+.container{
+    display:flex;
+    border: 5px solid #2D804F;
+   /* height:100vh;*/
+    flex-direction: column;
+}
+img{
+    border-radius: 10px;
+    height:100px;
+    width:100px;
+    margin: 20px;
+}
